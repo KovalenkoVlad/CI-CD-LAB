@@ -11,3 +11,12 @@ def result(player_gesture,pc_gesture,player_name):
         return player_name + " wins!Congratulations!"
     else:
         return player_name + " lost. Unfortunately! Try again)"
+
+
+try:
+    with open("Rules of the game.txt") as file:
+        print(file.read())
+    img = Image.open(r'photo_2023-02-13_19-30-47.jpg')
+    img.show()
+except:
+    pass
