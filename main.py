@@ -20,3 +20,10 @@ try:
     img.show()
 except:
     pass
+
+play = input("Do you want to start a game of Rock Paper Scissors Lizard Spock? If yes, please enter y : ")
+
+if(play.lower() == 'y'):
+    Game()
+else:
+    print("See you next time. Goodbye)")
