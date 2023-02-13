@@ -13,15 +13,19 @@ def result(player_gesture,pc_gesture,player_name):
         return player_name + " lost. Unfortunately! Try again)"
 
 
-try:
-    with open("Rules of the game.txt") as file:
-        print(file.read())
-    img = Image.open(r'photo_2023-02-13_19-30-47.jpg')
-    img.show()
-except:
-    pass
 
 play = input("Do you want to start a game of Rock Paper Scissors Lizard Spock? If yes, please enter y : ")
+rules = input("Do you want to read the rules?  If yes, please enter y : ")
+if(rules.lower() == 'y'):
+    image_rules = input("If you want to see a visual instruction enter y :")
+    try:
+        with open("Rules of the game.txt") as file:
+            print(file.read())
+        if(image_rules.lower() == 'y'):
+            img = Image.open(r'photo_2023-02-13_19-30-47.jpg')
+            img.show()
+    except:
+        pass
 
 if(play.lower() == 'y'):
     Game()
