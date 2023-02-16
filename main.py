@@ -21,6 +21,8 @@ def Game():
 
 def result(player_gesture, pc_gesture, player_name):
     print(gestures[player_gesture] + "\tvs\t" + gestures[pc_gesture])
+    if(player_gesture==pc_gesture):
+        return "Tie!"
     if ((player_gesture == 1 and pc_gesture in (3, 4)) or (player_gesture == 2 and pc_gesture in (1, 5)) or
             (player_gesture == 3 and pc_gesture in (2, 4)) or (player_gesture == 4 and pc_gesture in (2, 5)) or
             (player_gesture == 5 and pc_gesture in (1, 3))):
