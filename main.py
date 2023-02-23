@@ -4,7 +4,8 @@ from PIL import Image
 gestures = {1: "Rock", 2: "Paper", 3: "Scissors", 4: "Lizard", 5: "Spock"}
 
 
-def Game(): # this function invites player to the game and generates random result of second player-bot
+def Game():
+    """this function invites player to the game and generates random result of second player-bot."""
     print("Enter your name: ")
     player_name = input()
     print("%s, choose a gesture:" % player_name)
