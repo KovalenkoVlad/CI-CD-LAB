@@ -44,7 +44,6 @@ def result(player_gesture, pc_gesture):
     else:
         return lose()
 
-#print(result.__doc__)
 if __name__ == '__main__':
     play = input("Do you want to start a game of Rock Paper Scissors Lizard Spock? If yes, please enter y : ")
     rules = input("Do you want to read the rules?  If yes, please enter y : ")
