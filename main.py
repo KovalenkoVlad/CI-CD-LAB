@@ -6,8 +6,7 @@ gestures = {1: "Rock", 2: "Paper", 3: "Scissors", 4: "Lizard", 5: "Spock"}
 
 def Game():
     """this function invites player to the game and generates random result of second player-bot."""
-
-    print("%s, choose a gesture:")
+    print("Choose a gesture:")
     try:
         number_of_gesture = int(input("1 - Rock\n2 - Paper\n3 - Scissors\n4 - Lizard\n5 - Spock\n"))  # player chooses a gesture
         if number_of_gesture in (1, 2, 3, 4, 5):
@@ -46,20 +45,21 @@ def result(player_gesture, pc_gesture):
         print(lose())
 
 #print(result.__doc__)
-play = input("Do you want to start a game of Rock Paper Scissors Lizard Spock? If yes, please enter y : ")
-rules = input("Do you want to read the rules?  If yes, please enter y : ")
-if (rules.lower() == 'y'):
-    image_rules = input("If you want to see a visual instruction enter y :")
-    try:
-        with open("Rules of the game.txt") as file:
-            print(file.read())
-        if (image_rules.lower() == 'y'):
-            img = Image.open(r'photo_2023-02-13_19-30-47.jpg')
-            img.show()
-    except:
-        pass
+if __name__ == '__main__':
+    play = input("Do you want to start a game of Rock Paper Scissors Lizard Spock? If yes, please enter y : ")
+    rules = input("Do you want to read the rules?  If yes, please enter y : ")
+    if (rules.lower() == 'y'):
+        image_rules = input("If you want to see a visual instruction enter y :")
+        try:
+            with open("Rules of the game.txt") as file:
+                print(file.read())
+            if (image_rules.lower() == 'y'):
+                img = Image.open(r'photo_2023-02-13_19-30-47.jpg')
+                img.show()
+        except:
+            pass
 
-if (play.lower() == 'y'):
-    Game()
-else:
-    print("See you next time. Goodbye)")
+    if (play.lower() == 'y'):
+        Game()
+    else:
+        print("See you next time. Goodbye)")
