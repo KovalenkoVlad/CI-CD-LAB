@@ -36,13 +36,13 @@ def result(player_gesture, pc_gesture):
     :return: The result of the game"""
 
     if(player_gesture==pc_gesture):
-        print(tie())
+        return tie()
     if ((player_gesture == 1 and pc_gesture in (3, 4)) or (player_gesture == 2 and pc_gesture in (1, 5)) or
             (player_gesture == 3 and pc_gesture in (2, 4)) or (player_gesture == 4 and pc_gesture in (2, 5)) or
             (player_gesture == 5 and pc_gesture in (1, 3))):
-        print(win())
+        return win()
     else:
-        print(lose())
+        return lose()
 
 #print(result.__doc__)
 if __name__ == '__main__':
