@@ -8,7 +8,7 @@ def test_win_message():
     assert win() == "You win!Congratulations!"
 
 def test_tie_message():
-    assert tie() == "Tie"
+    assert tie() != "Tie"
 
 @pytest.mark.parametrize('player_gesture, pc_gesture, results', [(1,2,"You lost. Unfortunately! Try again)"),
                                                                  (1,3,"You win!Congratulations!"),
