@@ -4,8 +4,10 @@ from PIL import Image
 gestures = {1: "Rock", 2: "Paper", 3: "Scissors", 4: "Lizard", 5: "Spock"}
 
 
-def Game(): # this function invites player to the game and generates random result of second player-bot
-    print("Choose a gesture:" )
+def Game():
+    """this function invites player to the game and generates random result of second player-bot."""
+
+    print("%s, choose a gesture:")
     try:
         number_of_gesture = int(input("1 - Rock\n2 - Paper\n3 - Scissors\n4 - Lizard\n5 - Spock\n"))  # player chooses a gesture
         if number_of_gesture in (1, 2, 3, 4, 5):
