@@ -42,7 +42,7 @@ jobs:
 
     - name: Set output
       run: echo "{name}={value}" >> $GITHUB_OUTPUT
-      
+
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
