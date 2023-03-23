@@ -14,13 +14,16 @@ def Game():
             bot_gesture = randint(1, 5)  # bot generates a random gesture
             print(gestures[number_of_gesture] + "\tvs\t" + gestures[bot_gesture])
             print(result(number_of_gesture, bot_gesture))
-            # return result(number_of_gesture, bot_gesture)
         else:
-            print("\033[31m{}".format(
-                "You have chosen a wrong number, try again"))  # case in which player chose a wrong number of gesture
+            return wrong_number()  # case in which player chose a wrong number of gesture
     except:
         print("\033[31m{}".format("Wrong input, try again"))  # case in which player entered a wrong input
         raise
+
+
+def wrong_number():
+    return ("\033[31m{}".format(
+        "You have chosen a wrong number, try again"))
 
 
 def tie():
