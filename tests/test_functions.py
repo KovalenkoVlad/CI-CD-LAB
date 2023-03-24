@@ -1,7 +1,4 @@
 import pytest
-import os
-import pytest
-from random import randint
 from main import lose, win, tie, result, Game, wrong_number
 
 
@@ -32,7 +29,7 @@ def test_game(monkeypatch):
     printed_result = []
     monkeypatch.setattr('builtins.input', input_value)  # lambda _: next(input_values))
     monkeypatch.setattr('builtins.print',
-                        lambda item: printed_result.append(item))  # lambda item: printed_result.append(item))
+                        lambda item: printed_result.append(item))
 
     expected_result = ['Choose a gesture:', '1 - Rock\n2 - Paper\n3 - Scissors\n4 - Lizard\n5 - Spock\n',
                        'Paper\tvs\tRock', 'You win!Congratulations!'] \
