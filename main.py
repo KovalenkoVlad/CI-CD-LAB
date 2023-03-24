@@ -8,8 +8,8 @@ def Game():
     """this function invites player to the game and generates random result of second player-bot."""
     print("Choose a gesture:")
     try:
-        number_of_gesture = int(
-            input("1 - Rock\n2 - Paper\n3 - Scissors\n4 - Lizard\n5 - Spock\n"))  # player chooses a gesture
+        print("1 - Rock\n2 - Paper\n3 - Scissors\n4 - Lizard\n5 - Spock")
+        number_of_gesture = int(input())  # player chooses a gesture
         if number_of_gesture in (1, 2, 3, 4, 5):
             bot_gesture = randint(1, 5)  # bot generates a random gesture
             print(gestures[number_of_gesture] + "\tvs\t" + gestures[bot_gesture])
