@@ -8,17 +8,22 @@ def Game():
     """this function invites player to the game and generates random result of second player-bot."""
     print("Choose a gesture:")
     try:
-        number_of_gesture = int(
-            input("1 - Rock\n2 - Paper\n3 - Scissors\n4 - Lizard\n5 - Spock\n"))  # player chooses a gesture
+        print("1 - Rock\n2 - Paper\n3 - Scissors\n4 - Lizard\n5 - Spock")
+        number_of_gesture = int(input())  # player chooses a gesture
         if number_of_gesture in (1, 2, 3, 4, 5):
             bot_gesture = randint(1, 5)  # bot generates a random gesture
             print(gestures[number_of_gesture] + "\tvs\t" + gestures[bot_gesture])
             print(result(number_of_gesture, bot_gesture))
         else:
-            print("\033[31m{}".format(
-                "You have chosen a wrong number, try again"))  # case in which player chose a wrong number of gesture
+            return wrong_number()  # case in which player chose a wrong number of gesture
     except:
         print("\033[31m{}".format("Wrong input, try again"))  # case in which player entered a wrong input
+        raise
+
+
+def wrong_number():
+    return ("\033[31m{}".format(
+        "You have chosen a wrong number, try again"))
 
 
 def tie():
